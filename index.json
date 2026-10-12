@@ -1,0 +1,54 @@
+{
+  "name": "Yomi Extensions",
+  "badgeLabel": "MY",
+  "signingKey": "f5a82626db0c2ab8a34f075343ee038ac3d543d45f5cd9640334b4311da35202",
+  "contact": {
+    "website": "https://github.com/imonteiroyz/yomi-extensions"
+  },
+  "extensionList": {
+    "extensions": [
+      {
+        "name": "Lycan Toons (MY)",
+        "packageName": "eu.kanade.tachiyomi.extension.pt.lycantoonsmy",
+        "resources": {
+          "apkUrl": "https://github.com/imonteiroyz/yomi-extensions/releases/download/v4/tachiyomi-pt.lycantoonsmy-v1.6.4.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/keiyoushi/extensions-source@b5d2cd5c3d23a3408c7daa3eb807668aedfce3e0/src/pt/lycantoons/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://github.com/imonteiroyz/yomi-extensions/releases/download/v4/tachiyomi-pt.lycantoonsmy-v1.6.4.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "106004",
+        "versionName": "1.6.4",
+        "contentWarning": "CONTENT_WARNING_SAFE",
+        "sources": [
+          {
+            "id": "9117178890425713139",
+            "name": "Lycan Toons (MY)",
+            "language": "pt-BR",
+            "homeUrl": "https://lycantoons.com"
+          }
+        ]
+      },
+      {
+        "name": "Mango Toons (MY)",
+        "packageName": "eu.kanade.tachiyomi.extension.pt.mangotoonsmy",
+        "resources": {
+          "apkUrl": "https://github.com/imonteiroyz/yomi-extensions/releases/download/v4/tachiyomi-pt.mangotoonsmy-v1.6.4.apk",
+          "iconUrl": "https://cdn.jsdelivr.net/gh/keiyoushi/extensions-source@b5d2cd5c3d23a3408c7daa3eb807668aedfce3e0/src/pt/mangotoons/res/mipmap-xhdpi/ic_launcher.png",
+          "jarUrl": "https://github.com/imonteiroyz/yomi-extensions/releases/download/v4/tachiyomi-pt.mangotoonsmy-v1.6.4.jar"
+        },
+        "extensionLib": "1.6",
+        "versionCode": "106004",
+        "versionName": "1.6.4",
+        "contentWarning": "CONTENT_WARNING_SAFE",
+        "sources": [
+          {
+            "id": "8989984812354857153",
+            "name": "Mango Toons (MY)",
+            "language": "pt-BR",
+            "homeUrl": "https://mangotoons.com"
+          }
+        ]
+      }
+    ]
+  }
+}
