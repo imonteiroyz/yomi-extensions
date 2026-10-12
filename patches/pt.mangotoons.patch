@@ -108,7 +108,7 @@ diff --git a/src/pt/mangotoons/src/eu/kanade/tachiyomi/extension/pt/mangotoons/M
 index 4a5ee4dc..b9ec43b2 100644
 --- a/src/pt/mangotoons/src/eu/kanade/tachiyomi/extension/pt/mangotoons/MangoToons.kt
 +++ b/src/pt/mangotoons/src/eu/kanade/tachiyomi/extension/pt/mangotoons/MangoToons.kt
-@@ -1,29 +1,93 @@
+@@ -1,29 +1,95 @@
  package eu.kanade.tachiyomi.extension.pt.mangotoons
  
 -import eu.kanade.tachiyomi.multisrc.mangotheme.MangoTheme
@@ -202,7 +202,8 @@ index 4a5ee4dc..b9ec43b2 100644
 +            .parseAs<ManifestDto>()
 +            .pages
 +            .sortedBy { it.index }
-+            .map { Page(it.index, imageUrl = it.url) }
++            // some works send absolute CDN URLs, others only the path on the CDN
++            .map { Page(it.index, imageUrl = if (it.url.startsWith("/")) "$CDN_URL${it.url}" else it.url) }
 +    }
 +
 +    // =====================Utils=====================
@@ -214,6 +215,7 @@ index 4a5ee4dc..b9ec43b2 100644
 +
 +    companion object {
 +        private const val PAGE_LIMIT = 24
++        private const val CDN_URL = "https://cdn.mangotoons.com"
 +    }
  }
 diff --git a/src/pt/mangotoons/src/eu/kanade/tachiyomi/extension/pt/mangotoons/MangoToonsFilters.kt b/src/pt/mangotoons/src/eu/kanade/tachiyomi/extension/pt/mangotoons/MangoToonsFilters.kt
