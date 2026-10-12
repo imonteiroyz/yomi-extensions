@@ -24,14 +24,16 @@ new file mode 100644
 index 00000000..7b9bdc27
 --- /dev/null
 +++ b/src/pt/mangotoons/src/eu/kanade/tachiyomi/extension/pt/mangotoons/Dto.kt
-@@ -0,0 +1,75 @@
+@@ -0,0 +1,79 @@
 +package eu.kanade.tachiyomi.extension.pt.mangotoons
 +
 +import eu.kanade.tachiyomi.source.model.MangasPage
 +import eu.kanade.tachiyomi.source.model.SChapter
 +import eu.kanade.tachiyomi.source.model.SManga
++import keiyoushi.utils.tryParse
 +import kotlinx.serialization.SerialName
 +import kotlinx.serialization.Serializable
++import kotlin.time.Instant
 +
 +@Serializable
 +class MangaListDto(
@@ -71,6 +73,7 @@ index 00000000..7b9bdc27
 +@Serializable
 +class ChapterDto(
 +    private val numero: String,
++    @SerialName("published_at") private val publishedAt: String? = null,
 +) {
 +    fun toSChapter(mangaId: Int) = SChapter.create().apply {
 +        // same number format as the old API, so chapters already in the library keep their URL
@@ -78,7 +81,8 @@ index 00000000..7b9bdc27
 +        name = "Capitulo $number"
 +        chapter_number = numero.toFloatOrNull() ?: -1f
 +        url = "/obra/$mangaId/capitulo/$number"
-+        // the API sends no date (published_at is always null)
++        // published_at is null for many chapters
++        date_upload = Instant.tryParse(publishedAt)
 +    }
 +}
 +
@@ -135,8 +139,8 @@ index 4a5ee4dc..b9ec43b2 100644
 -    override fun Headers.Builder.configureHeaders(): Headers.Builder = addMangoThemeHeaders()
 -        .set("User-Agent", "-")
 -        .set("sec-fetch-mode", "none")
-+    // the page manifest answers 429 (Retry-After: 10) past 3 requests in 10 seconds
-+    override fun OkHttpClient.Builder.configureClient() = rateLimit(3, 10.seconds) { it.encodedPath.endsWith("/manifest") }
++    // the page manifest answers 429 (Retry-After: 10) from about 12 requests a minute
++    override fun OkHttpClient.Builder.configureClient() = rateLimit(1, 5.seconds) { it.encodedPath.endsWith("/manifest") }
 +        .rateLimit(2)
  
 -    override val encryptionKey = "abmPisXlFjOLVTnYhbYQTpkWJtOGKwVttzLqstfjRBNVaEtQYG"
