@@ -11,13 +11,13 @@
         "name": "Lycan Toons (MY)",
         "packageName": "eu.kanade.tachiyomi.extension.pt.lycantoonsmy",
         "resources": {
-          "apkUrl": "https://github.com/imonteiroyz/yomi-extensions/releases/download/v5/tachiyomi-pt.lycantoonsmy-v1.6.5.apk",
+          "apkUrl": "https://github.com/imonteiroyz/yomi-extensions/releases/download/v6/tachiyomi-pt.lycantoonsmy-v1.6.6.apk",
           "iconUrl": "https://cdn.jsdelivr.net/gh/keiyoushi/extensions-source@b5d2cd5c3d23a3408c7daa3eb807668aedfce3e0/src/pt/lycantoons/res/mipmap-xhdpi/ic_launcher.png",
-          "jarUrl": "https://github.com/imonteiroyz/yomi-extensions/releases/download/v5/tachiyomi-pt.lycantoonsmy-v1.6.5.jar"
+          "jarUrl": "https://github.com/imonteiroyz/yomi-extensions/releases/download/v6/tachiyomi-pt.lycantoonsmy-v1.6.6.jar"
         },
         "extensionLib": "1.6",
-        "versionCode": "106005",
-        "versionName": "1.6.5",
+        "versionCode": "106006",
+        "versionName": "1.6.6",
         "contentWarning": "CONTENT_WARNING_SAFE",
         "sources": [
           {
@@ -32,13 +32,13 @@
         "name": "Mango Toons (MY)",
         "packageName": "eu.kanade.tachiyomi.extension.pt.mangotoonsmy",
         "resources": {
-          "apkUrl": "https://github.com/imonteiroyz/yomi-extensions/releases/download/v5/tachiyomi-pt.mangotoonsmy-v1.6.5.apk",
+          "apkUrl": "https://github.com/imonteiroyz/yomi-extensions/releases/download/v6/tachiyomi-pt.mangotoonsmy-v1.6.6.apk",
           "iconUrl": "https://cdn.jsdelivr.net/gh/keiyoushi/extensions-source@b5d2cd5c3d23a3408c7daa3eb807668aedfce3e0/src/pt/mangotoons/res/mipmap-xhdpi/ic_launcher.png",
-          "jarUrl": "https://github.com/imonteiroyz/yomi-extensions/releases/download/v5/tachiyomi-pt.mangotoonsmy-v1.6.5.jar"
+          "jarUrl": "https://github.com/imonteiroyz/yomi-extensions/releases/download/v6/tachiyomi-pt.mangotoonsmy-v1.6.6.jar"
         },
         "extensionLib": "1.6",
-        "versionCode": "106005",
-        "versionName": "1.6.5",
+        "versionCode": "106006",
+        "versionName": "1.6.6",
         "contentWarning": "CONTENT_WARNING_SAFE",
         "sources": [
           {
